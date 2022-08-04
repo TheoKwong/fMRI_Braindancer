@@ -59,7 +59,7 @@ def create_denoising_dataset(epi_path,log_path,acqtimes_path,rot_dir=-1):
     for i in range(len(total_slices)): 
                
        
-        img_complete,cy_complete,cx_complete, radii_complete = inner_mask(epi_path,total_slices[i],volume_num=0,lvl=0.004,rad1=7,rad2=50,step=1)
+        img_complete,cy_complete,cx_complete, radii_complete = inner_mask(epi_path,total_slices[i],volume_num=0,rad1=7,rad2=50,step=1)
         
         
         center_rotation  = cen_rotation(epi_path,total_slices[i],img_complete,cy_complete,cx_complete,radii_complete, canny_sgm=1)
